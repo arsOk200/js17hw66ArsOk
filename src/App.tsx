@@ -1,10 +1,18 @@
 import React from 'react';
+import Layout from "./Components/Layout/Layout";
+import {Route, Routes} from "react-router-dom";
+import All from "./Containers/All/All";
+import Form from "./Components/Form/Form";
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <Layout>
+     <Routes>
+       <Route path='/' element={<All/>}/>
+       <Route path='/new-meal' element={<Form/>}/>
+        <Route path='/edit-meal/:id' element={<Form/>}/>
+     </Routes>
+    </Layout>
   );
 }
 
