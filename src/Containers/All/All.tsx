@@ -1,10 +1,15 @@
 import React from 'react';
 import List from "../../Components/List/List";
+import {Meal} from "../../type";
 
-const All = () => {
+interface Props{
+  meals:Meal[];
+}
+
+const All:React.FC<Props> = ({meals}) => {
   return (
     <>
-     <List/>
+     <List meals={meals}/>
     </>
   );
 };

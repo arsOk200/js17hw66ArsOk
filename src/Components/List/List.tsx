@@ -1,12 +1,19 @@
 import React from 'react';
 import Item from "../Item/Item";
+import {Meal} from "../../type";
 
-const List = () => {
+interface Props{
+  meals:Meal[];
+}
+
+const List:React.FC<Props>= ({meals}) => {
   return (
-    <div>
-      <Item/>
-      <Item/>
-    </div>
+    <>
+      {meals.map((meal) => (
+        <Item key={meal.id}
+              meal={meal}/>
+      ))}
+    </>
   );
 };
 
