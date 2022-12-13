@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState} from 'react';
 import List from "../../Components/List/List";
-import {Meal} from "../../type";
+import { Meal} from "../../type";
 import Spinner from "../../Components/Spinner/Spinner";
 import axiosApi from "../../axiosApi";
+import Total from "../../Components/Total/Total";
+
 
 interface Props {
   loading: boolean
@@ -21,9 +23,10 @@ const All: React.FC<Props> = ({meals, loading, fetchMeals}) => {
     } finally {
       setDeleting(false);
     }
-  }
+  };
 
   return (<>
+     <Total meals={meals}/>
       {loading ? <Spinner/> : (<List meals={meals} deleteMeal={deleteMeal} deleting={deleting}/>)}
     </>);
 };
