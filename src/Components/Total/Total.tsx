@@ -10,7 +10,7 @@ const Total:React.FC<Props> = ({meals}) => {
   }, 0);
   return (
     <div>
-      <h3>Total:{TotalKcal}</h3>
+      <h3>Total Kcal:{TotalKcal}</h3>
     </div>
   );
 };
