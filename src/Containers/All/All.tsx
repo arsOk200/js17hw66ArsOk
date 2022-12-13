@@ -26,7 +26,7 @@ const All: React.FC<Props> = ({meals, loading, fetchMeals}) => {
   };
 
   return (<>
-     <Total meals={meals}/>
+     <Total meals={meals} loading={deleting}/>
       {loading ? <Spinner/> : (<List meals={meals} deleteMeal={deleteMeal} deleting={deleting}/>)}
     </>);
 };
