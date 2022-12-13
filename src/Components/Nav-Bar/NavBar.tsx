@@ -2,8 +2,7 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 
 const NavBar = () => {
-  return (
-    <div className="navbar navbar-expand-sm navbar-dark bg-dark">
+  return (<div className="navbar navbar-expand-sm navbar-dark bg-dark">
       <div className="container">
         <span className="navbar-brand">Static Pages</span>
         <div className="collapse navbar-collapse">
@@ -21,8 +20,7 @@ const NavBar = () => {
           </ul>
         </div>
       </div>
-    </div>
-  );
+    </div>);
 };
 
 export default NavBar;
